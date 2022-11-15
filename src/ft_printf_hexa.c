@@ -6,9 +6,11 @@
 /*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:34:04 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 11:52:09 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:47:54 by tburlacu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_hexlen(unsigned int n)
 {
@@ -52,10 +54,10 @@ int	ft_printhexa(unsigned int n, const char ft)
 	return (ft_hex_len(n));	
 }
 
-/* int main()
+ int main()
 {
 	int i;
 	i = 10;
 	ft_printhexa(10, 'a');
 	
-} */
+} 
