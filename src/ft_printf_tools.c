@@ -6,7 +6,7 @@
 /*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:43:29 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 13:44:40 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:40:08 by tburlacu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_putstr(char *str)
 	if (str == NULL)
 	{
 		write(1, "(null)", 6);
-		return (0);
+		return (6);
 	}
 	while (str[i])
 	{
@@ -45,7 +45,7 @@ int	ft_printnbr(int n)
 
 int	ft_printmodule(void)
 {
-	write(1, "%", 2);
+	ft_putchar(37);
 	return (1);
 }
 

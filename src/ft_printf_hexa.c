@@ -6,58 +6,55 @@
 /*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:34:04 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 13:47:54 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:31:01 by tburlacu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_hexlen(unsigned int n)
-{
-	size_t	i;
+#include "ft_printf.h"
+#include "libft.h"
 
-	i = 0;
-	while (i <= n)
+int	ft_hex_len(unsigned	int numero)
+{
+	int	len;
+
+	len = 0;
+	while (numero != 0)
 	{
-		i++;
-		n = n / 16;
+		len++;
+		numero = numero / 16;
 	}
-	return (i);
+	return (len);
 }
 
-void	ft_puthexa(unsigned int n, const char ft)
+void	ft_put_hex(unsigned int numero, const char variavel)
 {
-	if (n >= 16)
+	if (numero >= 16)
 	{
-		ft_puthexa(n / 16, ft);
-		ft_puthexa(n % 16, ft);
-	}
-	if (n < 10)
-	{
-		ft_putchar_fd((n + '0'), 1);
+		ft_put_hex(numero / 16, variavel);
+		ft_put_hex(numero % 16, variavel);
 	}
 	else
 	{
-		if (ft == 'x')
-			ft_putchar_fd((n - 10 + 'a'), 1);
-		if (ft == 'X')
-			ft_putchar_ft((n - 10 + 'A'), 1);
+		if (numero <= 9)
+			ft_putchar_fd((numero + '0'), 1);
+		else
+		{
+			if (variavel == 'x')
+				ft_putchar_fd((numero - 10 + 'a'), 1);
+			if (variavel == 'X')
+				ft_putchar_fd((numero - 10 + 'A'), 1);
+		}
 	}
 }
 
-int	ft_printhexa(unsigned int n, const char ft)
+int	ft_print_hex(unsigned int numero, const char variavel)
 {
-	if (n == 0)
+	if (numero == 0)
 		return (write(1, "0", 1));
 	else
-		ft_put_hex(n, ft);
-	return (ft_hex_len(n));	
+		ft_put_hex(numero, variavel);
+	return (ft_hex_len(numero));
 }
-
- int main()
-{
-	int i;
-	i = 10;
-	ft_printhexa(10, 'a');
-	
-} 

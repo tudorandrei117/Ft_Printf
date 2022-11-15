@@ -6,7 +6,7 @@
 /*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:52:35 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 12:02:59 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:42:36 by tburlacu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_print_ptr(unsigned long long ptr)
 
 	len = 0;
 	if (ptr == 0)
-		len += write(1, "(nil)", 5);
+		len += write(1, "(null)", 6);
 	else
 	{
 		len += write(1, "0x", 2);
