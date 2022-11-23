@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tudor <tudor@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:52:35 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 15:42:36 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:48:35 by tudor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
-#include <stdint.h>
 
 int	ft_ptr_len(uintptr_t num)
 {

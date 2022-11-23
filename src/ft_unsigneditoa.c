@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unsigneditoa.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tudor <tudor@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:21:54 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 15:26:38 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:49:44 by tudor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int	ft_printnbru(unsigned n)
 	len = 0;
 	num = ft_itoau(n);
 	len = ft_putstr(num);
+	free(num);
 	return (len);
 }

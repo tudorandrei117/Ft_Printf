@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_tools.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburlacu <tburlacu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tudor <tudor@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:43:29 by tburlacu          #+#    #+#             */
-/*   Updated: 2022/11/15 15:40:08 by tburlacu         ###   ########.fr       */
+/*   Updated: 2022/11/23 21:50:24 by tudor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_putstr(char *str)
 {
@@ -40,6 +39,7 @@ int	ft_printnbr(int n)
 	len = 0;
 	num = ft_itoa(n);
 	len = ft_putstr(num);
+	free(num);
 	return (len);
 }
 
